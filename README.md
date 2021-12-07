@@ -13,4 +13,4 @@ yarn dev
 
 This site is deployed on Netlify and you can deploy it to your own Netlify account too if you click the button below:
 
-[Deploy to Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/kenny_io/petcandate)
+[Deploy to Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/kenny-io/petcandate)
