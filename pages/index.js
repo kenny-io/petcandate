@@ -1,12 +1,12 @@
 import Head from "next/head";
-import { useState, setState } from "react";
 import PetList from "../components/PetList";
-// import Image from 'next/image'
-import PetListForm from "../components/PetListForm";
 import Footer from "../components/Footer";
+import Link from "next/link";
+import Image from "next/image";
+import { server } from "../config";
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:8888/.netlify/functions/get-pets");
+  const res = await fetch(`${server}/.netlify/functions/get-pets`);
   const result = await res.json();
 
   return {
@@ -17,11 +17,6 @@ export async function getStaticProps() {
 }
 
 export default function Home({ pets }) {
-  const [showForm, setShowForm] = useState(false);
-  const toggleShowForm = () => {
-    // toggle the showForm state with setState
-    setShowForm({ showForm: !showForm });
-  };
   return (
     <div>
       <Head>
@@ -32,25 +27,26 @@ export default function Home({ pets }) {
 
       <section className="py-8 px-4">
         <div className="static">
-          <a
-            href="/"
-            className="flex ml-32 mb-16 font-adelia uppercase items-center md:justify-start justify-center text-gray-900"
-          >
-            <img src="/favicon.png" alt="logo" className="w-10" />
-            <span className="ml-3 text-xl">Pets can date</span>
-          </a>
+          <Link href="/">
+            <a className="flex ml-32 mb-16 font-adelia uppercase items-center md:justify-start justify-center text-gray-900">
+              <Image width={40} height={50} src="/favicon.png" alt="logo" />
+              <span className="ml-3 text-xl">Pets can date</span>
+            </a>
+          </Link>
 
           <div className="justify-center items-center flex flex-col mt-8">
             <h1 className="sm:text-4xl text-2xl font-black mb-10 text-center w-2/4 font-pumpkin">
-              Let’s get your baby hooked up with another baby! *winks winks*
+              {`Let’s get your baby hooked up with another baby! *winks winks*`}
             </h1>
             <p className="mb-10 opacity-70 text-base leading-relaxed text-center w-2/4 font-sfpro">
-              You know how one time you met someone amazing, you bonded with
+              {`You know how one time you met someone amazing, you bonded with
               them and became friends, eventually ya'll fell in love, yeah that
-              feeling. Pets deserve it too
+              feeling. Pets deserve it too`}
             </p>
 
-            <img
+            <Image
+              width={500}
+              height={400}
               className="w-full sm:w-1/4 md:w-auto lg:w-auto xl:w-1/3 h-96  mb-10"
               alt="pet"
               src="/pet.png"
