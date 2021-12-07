@@ -1,0 +1,15 @@
+[build]
+command = "npm run build"
+publish = "build"
+
+[dev]
+command = "npm run dev"
+
+[functions]
+directory = "netlify/functions"
+node_bundler = "esbuild"
+
+[[redirects]]
+from = "/save"
+to = "/.netlify/functions/save"
+status = 200
