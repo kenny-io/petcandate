@@ -1,4 +1,4 @@
-const querystring = require("querystring");
+import querystring from "querystring";
 import { createClient } from "@supabase/supabase-js";
 const supabase = createClient(
   process.env.SUPABASE_URL,
