@@ -8,7 +8,6 @@ export default function PetListForm() {
         <p className="mb-8 opacity-70 text-base leading-relaxed text-center w-2/4 font-sfpro">
           Tell us about your pet and we will help you find the perfect partner!
         </p>
-        {/* <!-- Create a Tailwind form with inputs for the pets name, age, location, funfact and lookingfor --> */}
         <form
           action="/.netlify/functions/save"
           id="petform"
