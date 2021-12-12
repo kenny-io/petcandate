@@ -48,7 +48,7 @@ export default function Footer() {
           </Link>
         </p>
         <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-          <Link href="/">
+          <Link href="https://www.twitter.com/kenny_io">
             <a className="ml-3 text-gray-500">
               <svg
                 fill="currentColor"

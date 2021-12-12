@@ -4,8 +4,9 @@ import Footer from "../components/Footer";
 import Link from "next/link";
 import Image from "next/image";
 import { server } from "../config";
+
 export async function getStaticProps() {
-  const res = await fetch("https://petscabndate.glitch.me");
+  const res = await fetch("./netlify/functions/get-pets");
   const result = await res.json();
 
   return {
