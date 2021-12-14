@@ -13,10 +13,6 @@ export async function getStaticProps() {
     props: {
       pets: JSON.stringify(result),
     },
-<<<<<<< HEAD
-    revalidate: 100,
-=======
->>>>>>> 085ae2461f6549477762af98efee6d65f16bfd36
   };
 }
 
