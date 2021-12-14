@@ -6,7 +6,7 @@ import Image from "next/image";
 import { server } from "../config";
 
 export async function getStaticProps() {
-  const res = await fetch(`${server}/.netlify/functions/get-pets`);
+  const res = await fetch("https://petscabndate.glitch.me");
   const result = await res.json();
 
   return {
