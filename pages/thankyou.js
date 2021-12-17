@@ -9,7 +9,8 @@ export default function ThankYou() {
             Thank you!
           </h1>
           <p className="mb-8 leading-relaxed font-sfpro">
-            {`We've listed your pet. Now get ready to fend off dozens of well
+            {`Okay, just give us about a minute to review your pets details, with any luck, your pet will be listed on our homepage in a minute.
+            I recommend you start getting ready to fend off dozens of well
             meaning admirers. 😉 `}
           </p>
           <div className="">
@@ -24,9 +25,10 @@ export default function ThankYou() {
           <Image
             width={600}
             height={400}
+            format="webp"
             className="object-cover object-center rounded"
-            alt="hero"
-            src="/corgi.gif"
+            alt="hooray image"
+            src="/hooray.jpeg"
           />
         </div>
       </div>

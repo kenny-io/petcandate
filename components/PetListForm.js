@@ -18,7 +18,7 @@ export default function PetListForm() {
           <div className="w-2/4 mt-3">
             <label
               className="flex text-start text-gray-700 text-sm font-bold mb-2"
-              htmlFor="name"
+              htmlFor=""
             >
               Name
             </label>

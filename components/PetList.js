@@ -21,6 +21,7 @@ export default function PetList({ pets }) {
           ahead and list your own pet!`}
         </p>
         <button
+          type="button"
           className="bg-appaccent hover:bg-appaccentdark text-black w-52 h-14 font-pumpkin py-2 px-4 rounded-xl"
           onClick={toggleShowForm}
         >
@@ -38,6 +39,8 @@ export default function PetList({ pets }) {
                   <img
                     className="lg:h-96 md:h-36 w-full object-cover object-center"
                     src={pet.image}
+                    height="300"
+                    width="300"
                     alt="pets"
                   />
                   <div className="p-6 items-center mx-auto">
@@ -47,8 +50,13 @@ export default function PetList({ pets }) {
                     <p className="leading-relaxed mb-3 font-sfpro">
                       {pet.funfact}
                     </p>
-                    <button className="flex mt-8 mb-8 mx-auto text-center font-bold py-2 px-4 rounded-full border border-white  font-pumpkin ">
-                      Connect with {pet.name}
+
+                    <button
+                      disabled
+                      type="button"
+                      className="flex mt-8 mb-8 mx-auto text-center font-bold py-2 px-4 rounded-full border border-white font-pumpkin "
+                    >
+                      Shoot your shot at {pet.name}
                     </button>
                   </div>
                 </div>
