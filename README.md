@@ -22,3 +22,4 @@ This site is deployed on [Netlify](https://app.netlify.com/) and you can deploy 
 - Image Optimization wt Next Image
 - Accessibility fixes on the markup
 - SEO thingies if you're feeling like it
+- Make the pet cards look better (funner)
