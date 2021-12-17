@@ -48,7 +48,8 @@ export default function Home({ pets }) {
             <Image
               width={500}
               height={400}
-              className="w-full sm:w-1/4 md:w-auto lg:w-auto xl:w-1/3 h-96  mb-10"
+              format="webp"
+              className="w-full sm:w-1/4 md:w-auto lg:w-auto xl:w-1/3 h-96 mb-10"
               alt="pet"
               src="/pet.png"
             />
@@ -56,15 +57,13 @@ export default function Home({ pets }) {
           <div>
             {/* <!-- create a circle to appear on the left of the page with a background color of red --> */}
             <div
-              className="absolute top-24 -left-80 font-bold text-gray-700 bg-ecllipse rounded-full flex items-center justify-center font-sfpro h-24 w-24"
+              className="absolute top-24 -left-80  bg-ecllipse rounded-full  h-24 w-24"
               style={{ height: "550px", width: "550px" }}
             />
-          </div>
-          <div>
-            <div
-              className="absolute top-3/4 left-3/4 font-bold text-gray-700 bg-ecllipse rounded-full flex items-center justify-center font-sfpro h-24 w-24"
+            {/* <div
+              className="absolute top-96 left-3/4  bg-ecllipse rounded-full  h-24 w-24"
               style={{ height: "550px", width: "550px" }}
-            />
+            /> */}
           </div>
         </div>
         <PetList pets={pets} />
