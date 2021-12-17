@@ -42,15 +42,21 @@ export default function Home() {
               them and became friends, eventually ya'll fell in love, yeah that
               feeling. Pets deserve it too`}
             </p>
-
             <Image
+              src="/pet-hero.svg"
+              alt="pet-hero"
+              width="612"
+              height="408"
+            />
+
+            {/* <Image
               width={500}
               height={400}
               format="webp"
               className="w-full sm:w-1/4 md:w-auto lg:w-auto xl:w-1/3 h-96 mb-10"
               alt="pet"
               src="/pet.png"
-            />
+            /> */}
             <Link href="/pets">
               <a>
                 <input
