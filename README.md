@@ -11,6 +11,14 @@ npm run dev
 yarn dev
 ```
 
-This site is deployed on Netlify and you can deploy it to your own Netlify account too if you click the button below:
+This site is deployed on [Netlify](https://app.netlify.com/) and you can deploy it to your own Netlify account too if you click the button below:
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/kenny-io/petcandate)
+
+## Contribute
+
+### TODOS
+
+- Image Optimization wt Next Image
+- Accessibility fixes on the markup
+- SEO thingies if you're feeling like it

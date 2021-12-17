@@ -51,13 +51,13 @@ export default function PetList({ pets }) {
                       {pet.funfact}
                     </p>
 
-                    <button
+                    {/* <button
                       disabled
                       type="button"
                       className="flex mt-8 mb-8 mx-auto text-center font-bold py-2 px-4 rounded-full border border-white font-pumpkin "
                     >
                       Shoot your shot at {pet.name}
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>

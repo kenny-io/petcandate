@@ -9,12 +9,12 @@ export default function ThankYou() {
             Thank you!
           </h1>
           <p className="mb-8 leading-relaxed font-sfpro">
-            {`Okay, just give us about a minute to review your pets details, with any luck, your pet will be listed on our homepage in a minute.
-            I recommend you start getting ready to fend off dozens of well
+            {`Okay, just give us some time to review your pets details, with any luck, your pet will be listed in a minute.
+            In the meantime, I recommend you start getting ready to fend off dozens of well
             meaning admirers. 😉 `}
           </p>
           <div className="">
-            <Link href="/">
+            <Link href="/pets">
               <a className="flex justify-center uppercase bg-appaccent hover:bg-appaccentdark text-black w-52 h-14 font-pumpkin py-2 px-4 rounded-xl">
                 Go see your pet
               </a>

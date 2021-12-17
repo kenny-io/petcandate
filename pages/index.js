@@ -1,40 +1,38 @@
 import Head from "next/head";
-import PetList from "../components/PetList";
-import Footer from "../components/Footer";
+
 import Link from "next/link";
 import Image from "next/image";
-import { server } from "../config";
 
-export async function getStaticProps() {
-  const res = await fetch(`${server}/.netlify/functions/get-pets`);
-  const result = await res.json();
-
-  return {
-    props: {
-      pets: JSON.stringify(result),
-    },
-    revalidate: 1,
-  };
-}
-
-export default function Home({ pets }) {
+export default function Home() {
   return (
     <div>
       <Head>
         <title>Pets can date</title>
-        <meta name="description" content="Pets can date" />
-        <link rel="icon" href="/favicon.png" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
+        <meta name="description" content="Pets can date"></meta>
+        <meta
+          property="og:title"
+          content="Find love for your pets"
+          key="ogtitle"
+        />
+        <meta property="og:description" content="Pets can date" key="ogdesc" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/kennyy/image/upload/v1639768357/site-og_oyyvnz.png"
+          key="ogimage"
+        />
+        <meta name="twitter:card" content="summary" key="twcard" />
+        <meta
+          name="twitter:creator"
+          content="https://www.twitter.com/kenny_io"
+          key="twhandle"
+        />
       </Head>
 
       <section className="py-8 px-4">
         <div className="static">
-          <Link href="/">
-            <a className="flex ml-32 mb-16 font-adelia uppercase items-center md:justify-start justify-center text-gray-900">
-              <Image width={40} height={50} src="/favicon.png" alt="logo" />
-              <span className="ml-3 text-xl">Pets can date</span>
-            </a>
-          </Link>
-
           <div className="justify-center items-center flex flex-col mt-8">
             <h1 className="sm:text-4xl text-2xl font-black mb-10 text-center w-2/4 font-pumpkin">
               {`Let’s get your baby hooked up with another baby! *winks winks*`}
@@ -53,6 +51,15 @@ export default function Home({ pets }) {
               alt="pet"
               src="/pet.png"
             />
+            <Link href="/pets">
+              <a>
+                <input
+                  className="cursor-pointer mt-20 bg-appaccent hover:bg-appaccentdark text-black w-52 h-14 font-pumpkin py-2 px-4 rounded-xl"
+                  type="button"
+                  value="Explore"
+                />
+              </a>
+            </Link>
           </div>
           <div>
             {/* <!-- create a circle to appear on the left of the page with a background color of red --> */}
@@ -60,14 +67,8 @@ export default function Home({ pets }) {
               className="absolute top-24 -left-80  bg-ecllipse rounded-full  h-24 w-24"
               style={{ height: "550px", width: "550px" }}
             />
-            {/* <div
-              className="absolute top-96 left-3/4  bg-ecllipse rounded-full  h-24 w-24"
-              style={{ height: "550px", width: "550px" }}
-            /> */}
           </div>
         </div>
-        <PetList pets={pets} />
-        <Footer />
       </section>
     </div>
   );
