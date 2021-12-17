@@ -1,6 +1,21 @@
-import PetListForm from "./PetListForm";
+import PetListForm from "../../components/PetListForm";
 import { useState } from "react";
 import Image from "next/image";
+import { server } from "../../config";
+import Link from "next/link";
+
+export async function getStaticProps() {
+  const res = await fetch(`${server}/.netlify/functions/get-pets`);
+  const result = await res.json();
+
+  return {
+    props: {
+      pets: JSON.stringify(result),
+    },
+    revalidate: 10,
+  };
+}
+
 export default function PetList({ pets }) {
   const petArray = JSON.parse(pets);
 
@@ -37,12 +52,13 @@ export default function PetList({ pets }) {
               <div key={i} className="p-4 sm:w-1/2 md:w-1/3 lg:w-1/4 ">
                 <div className="h-full bg-gradient-to-r from-red-500 to-yellow-500 hover:from-yellow-400 hover:to-red-400 rounded-lg overflow-hidden">
                   <img
-                    className="lg:h-96 md:h-36 w-full object-cover object-center"
+                    className=" h-1/2 w-full object-cover object-center"
                     src={pet.image}
                     height="300"
                     width="300"
                     alt="pets"
                   />
+
                   <div className="p-6 items-center mx-auto">
                     <h1 className="title-font text-lg font-medium mb-3 font-pumpkin">
                       {pet.name}, {pet.age} / {pet.location}
@@ -50,14 +66,16 @@ export default function PetList({ pets }) {
                     <p className="leading-relaxed mb-3 font-sfpro">
                       {pet.funfact}
                     </p>
-
-                    <button
-                      disabled
-                      type="button"
-                      className="flex mt-8 mb-8 mx-auto text-center font-bold py-2 px-4 rounded-full border border-white font-pumpkin "
-                    >
-                      Shoot your shot at {pet.name}
-                    </button>
+                    <Link href={`/pets/${encodeURIComponent(pet.name)}`}>
+                      <a>
+                        <button
+                          type="button"
+                          className="flex mt-8 mx-auto text-center font-bold py-2 px-4 rounded-full border border-white font-pumpkin "
+                        >
+                          Say hi to {pet.name}
+                        </button>
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>
