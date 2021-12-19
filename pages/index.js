@@ -1,5 +1,4 @@
 import Head from "next/head";
-
 import Link from "next/link";
 import Image from "next/image";
 
@@ -11,19 +10,26 @@ export default function Home() {
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
-        <meta name="description" content="Pets can date"></meta>
+        <meta
+          name="description"
+          content="You know how you once met someone really cool and loved them? yeah we are letting your pets do the same now"
+        ></meta>
         <meta
           property="og:title"
           content="Find love for your pets"
           key="ogtitle"
         />
-        <meta property="og:description" content="Pets can date" key="ogdesc" />
+        <meta
+          property="og:description"
+          content="You know how you once met someone really cool and loved them? yeah we are letting your pets do the same now"
+          key="ogdesc"
+        />
         <meta
           property="og:image"
           content="https://res.cloudinary.com/kennyy/image/upload/v1639768357/site-og_oyyvnz.png"
           key="ogimage"
         />
-        <meta name="twitter:card" content="summary" key="twcard" />
+        <meta name="twitter:card" content="summary_large_image" key="twcard" />
         <meta
           name="twitter:creator"
           content="https://www.twitter.com/kenny_io"
@@ -49,14 +55,6 @@ export default function Home() {
               height="408"
             />
 
-            {/* <Image
-              width={500}
-              height={400}
-              format="webp"
-              className="w-full sm:w-1/4 md:w-auto lg:w-auto xl:w-1/3 h-96 mb-10"
-              alt="pet"
-              src="/pet.png"
-            /> */}
             <Link href="/pets">
               <a>
                 <input

@@ -1,6 +1,5 @@
 import PetListForm from "../../components/PetListForm";
 import { useState } from "react";
-import Image from "next/image";
 import { server } from "../../config";
 import Link from "next/link";
 
@@ -12,7 +11,7 @@ export async function getStaticProps() {
     props: {
       pets: JSON.stringify(result),
     },
-    revalidate: 10,
+    revalidate: 60,
   };
 }
 

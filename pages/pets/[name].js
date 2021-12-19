@@ -10,8 +10,6 @@ export async function getStaticPaths() {
     params: { name: pets.name },
   }));
 
-  console.log(paths);
-
   return { paths, fallback: false };
 }
 
@@ -32,7 +30,8 @@ export async function getStaticProps({ params }) {
 
 export default function PetDetails({ pet }) {
   const handle = "https://www.twitter.com/kenny_io";
-  const hostname = `https://petscanloveeachother.netlify.app/pets/${pet.name}`;
+  const petURL = `https://petscan.date/pets/${pet.name}`;
+
   return (
     <div>
       <Head>
@@ -43,7 +42,7 @@ export default function PetDetails({ pet }) {
         <meta property="og:image" content={pet.image} key="ogimage" />
         <meta property="og:description" content={pet.funfact} key="ogdesc" />
         <title> {pet.name} is looking for friends</title>
-        <meta name="twitter:card" content="summary" key="twcard" />
+        <meta name="twitter:card" content="summary_large_image" key="twcard" />
         <meta name="twitter:creator" content={handle} key="twhandle" />
       </Head>
       <section className="bg-ecllipse text-primary-content body-font overflow-hidden">
@@ -76,7 +75,7 @@ export default function PetDetails({ pet }) {
               </div>
               <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5"></div>
               <div className="flex">
-                <Link href={`https://twitter.com/intent/tweet?url=${hostname}`}>
+                <Link href={`https://twitter.com/intent/tweet?url=${petURL}`}>
                   <a>
                     <button
                       type="button"
@@ -86,13 +85,6 @@ export default function PetDetails({ pet }) {
                     </button>
                   </a>
                 </Link>
-                {/* <Link href={`https://twitter.com/intent/tweet?url=${hostname}`}>
-                  <a>
-                    <button className="bg-primary text-white font-bold py-2 px-4 rounded-full">
-                      Help me meet friends
-                    </button>
-                  </a>
-                </Link> */}
               </div>
             </div>
           </div>

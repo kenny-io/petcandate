@@ -9,14 +9,14 @@ export default function ThankYou() {
             Thank you!
           </h1>
           <p className="mb-8 leading-relaxed font-sfpro">
-            {`Okay, just give us some time to review your pets details, with any luck, your pet will be listed in a minute.
+            {`Okay, just give us some time to review your pets details, with any luck, your pet will be listed in about 10 minutes.
             In the meantime, I recommend you start getting ready to fend off dozens of well
             meaning admirers. 😉 `}
           </p>
           <div className="">
             <Link href="/pets">
               <a className="flex justify-center uppercase bg-appaccent hover:bg-appaccentdark text-black w-52 h-14 font-pumpkin py-2 px-4 rounded-xl">
-                Go see your pet
+                Continue
               </a>
             </Link>
           </div>
