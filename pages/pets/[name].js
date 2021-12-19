@@ -42,7 +42,7 @@ export default function PetDetails({ pet }) {
         <meta property="og:image" content={pet.image} key="ogimage" />
         <meta property="og:description" content={pet.funfact} key="ogdesc" />
         <title> {pet.name} is looking for friends</title>
-        <meta name="twitter:card" content="summary" key="twcard" />
+        <meta name="twitter:card" content="summary_large_image" key="twcard" />
         <meta name="twitter:creator" content={handle} key="twhandle" />
       </Head>
       <section className="bg-ecllipse text-primary-content body-font overflow-hidden">

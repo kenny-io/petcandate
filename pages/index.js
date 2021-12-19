@@ -29,7 +29,7 @@ export default function Home() {
           content="https://res.cloudinary.com/kennyy/image/upload/v1639768357/site-og_oyyvnz.png"
           key="ogimage"
         />
-        <meta name="twitter:card" content="summary" key="twcard" />
+        <meta name="twitter:card" content="summary_large_image" key="twcard" />
         <meta
           name="twitter:creator"
           content="https://www.twitter.com/kenny_io"
