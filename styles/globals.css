@@ -4,18 +4,21 @@
 
 @font-face {
   font-family: "Pumpkin Story";
-  src: url("../public/pumpkin-font/PumpkinStory-vmKrM.ttf");
+  src: url("../public/pumpkin-font/PumpkinStory-vmKrM.ttf") format("truetype");
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "ADELIA";
-  src: url("../public/adelia-font/ADELIA.otf");
+  src: url("../public/adelia-font/ADELIA.otf") format("truetype");
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "SF Pro";
-  src: url("../public/sf/SF-Pro.ttf");
+  src: url("../public/sf/SF-Pro.ttf") format("truetype");
   font-style: normal;
+  font-display: swap;
 }
