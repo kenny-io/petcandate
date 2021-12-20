@@ -26,7 +26,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://res.cloudinary.com/kennyy/image/upload/v1639768357/site-og_oyyvnz.png"
+          content="https://res.cloudinary.com/kennyy/image/upload/v1639995575/pet-og_k4gpy5.png"
           key="ogimage"
         />
         <meta name="twitter:card" content="summary_large_image" key="twcard" />
@@ -43,7 +43,7 @@ export default function Home() {
             <h1 className="sm:text-4xl text-2xl font-black mb-10 text-center w-2/4 font-pumpkin">
               {`Let’s get your baby hooked up with another baby! *winks winks*`}
             </h1>
-            <p className="mb-10 opacity-70 text-base leading-relaxed text-center w-2/4 font-sfpro">
+            <p className="mb-10 opacity-70 text-base leading-relaxed text-center w-2/4 font-euclid">
               {`You know how one time you met someone amazing, you bonded with
               them and became friends, eventually ya'll fell in love, yeah that
               feeling. Pets deserve it too`}
