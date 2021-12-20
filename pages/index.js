@@ -26,7 +26,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://res.cloudinary.com/kennyy/image/upload/v1639768357/site-og_oyyvnz.png"
+          content="https://res.cloudinary.com/kennyy/image/upload/v1639995575/pet-og_k4gpy5.png"
           key="ogimage"
         />
         <meta name="twitter:card" content="summary_large_image" key="twcard" />
