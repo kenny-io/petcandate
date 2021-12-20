@@ -15,6 +15,7 @@ module.exports = {
         pumpkin: ['"Pumpkin Story"', "cursive"],
         adelia: ["ADELIA", "cursive"],
         sfpro: ['"SF Pro"', "sans-serif"],
+        euclid: ["Euclid Circular A Regular", "sans-serif"],
       },
     },
   },

@@ -29,7 +29,7 @@ export default function PetList({ pets }) {
         <h1 className="sm:text-4xl text-2xl font-black mb-10 text-center w-2/4 font-adelia">
           Peep our gorgeous pets
         </h1>
-        <p className="mb-8 opacity-70 text-base leading-relaxed text-center w-2/4 font-sfpro">
+        <p className="mb-8 opacity-70 text-base leading-relaxed text-center w-2/4 font-euclid">
           {`You know what? take a moment and look through our list of gorgeous
           pets. Assuming you don't spend all day looking at these cuties, go
           ahead and list your own pet!`}
@@ -62,7 +62,7 @@ export default function PetList({ pets }) {
                     <h1 className="title-font text-lg font-medium mb-3 font-pumpkin">
                       {pet.name}, {pet.age} / {pet.location}
                     </h1>
-                    <p className="leading-relaxed mb-3 font-sfpro">
+                    <p className="leading-relaxed mb-3 font-euclid">
                       {pet.funfact}
                     </p>
                     <Link href={`/pets/${encodeURIComponent(pet.name)}`}>

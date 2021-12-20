@@ -45,7 +45,7 @@ export default function PetDetails({ pet }) {
         <meta name="twitter:card" content="summary_large_image" key="twcard" />
         <meta name="twitter:creator" content={handle} key="twhandle" />
       </Head>
-      <section className="bg-ecllipse text-primary-content body-font overflow-hidden">
+      <section className="bg-ecllipse text-primary-content body-font overflow-hidden font-euclid">
         <div className="container px-5 py-24 mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
             <img
@@ -63,15 +63,13 @@ export default function PetDetails({ pet }) {
                 {pet.name}
               </h1>
 
-              <p className="leading-relaxed opacity-70">
-                I live in {pet.location} and I&apos;m {pet.age} old. <br></br>
-                <br></br>
-                {`Here's a funfact about me:`} <br></br>
+              <p className="leading-relaxed opacity-70 ">
+                I live in {pet.location} and I&apos;m {pet.age} old. <br />
+                <br />
+                {`Here's a funfact about me:`} <br />
               </p>
-              <div className="flex mb-4 mt-3 text-base leading-relaxed">
-                <span className="flex ml-3 pl-3 py-2 opacity-70 border-l-2 space-x-4">
-                  <p>{pet.funfact}</p>
-                </span>
+              <div className="flex mb-4 mt-3  leading-relaxed opacity-70">
+                <p>{pet.funfact}</p>
               </div>
               <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5"></div>
               <div className="flex">
